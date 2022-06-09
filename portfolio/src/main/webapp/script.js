@@ -26,3 +26,18 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+/**
+ * Adds a random fact about chelle to the page!
+ */
+function addRandomFact() {
+    const facts =
+        ['I grew up moving between 3 different countries!', 'I play the guzheng!', 'I want to learn French!', 'I love rain :D'];
+  
+    // Pick a random greeting.
+    const fact = facts[Math.floor(Math.random() * facts.length)];
+  
+    // Add it to the page.
+    const factsContainer = document.getElementById('facts-container');
+    factsContainer.innerText = fact;
+}
