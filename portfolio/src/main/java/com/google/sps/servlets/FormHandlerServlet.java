@@ -1,6 +1,8 @@
 package com.google.sps.servlets;
 
 import java.io.IOException;
+import java.util.Timer;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,8 +22,6 @@ public class FormHandlerServlet extends HttpServlet {
     // Write the value to the response so the user can see it.
     response.setContentType("text/html;");
     response.getWriter().println("Thank you for your advice: " + text);
-
-    // response.sendRedirect("https://michelleli-sps-summer22.appspot.com");
   }
 
 

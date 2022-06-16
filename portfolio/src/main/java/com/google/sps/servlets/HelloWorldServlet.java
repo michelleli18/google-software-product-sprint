@@ -14,9 +14,6 @@ public class HelloWorldServlet extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    // response.setContentType("text/html");
-    // response.getWriter().println("<h1>Hello Michelle!</h1>");
-    
     ArrayList<String> books = new ArrayList<String>();
     books.add("The Adventures of Sherlock Holmes");
     books.add("The Book Thief");

@@ -57,12 +57,7 @@ async function goodBook(){
 
     // Parse the response as JSON.
     const books = await responseFromServer.json();
-
-    // Now we can reference the fields in books!
-    // console.log(books[0]);
-    // console.log(books[1]);
-    // console.log(books[2]);
-
+    
     // Pick a random random.
     const book = books[Math.floor(Math.random() * books.length)];
 
