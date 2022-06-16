@@ -49,5 +49,25 @@ async function sayHello() {
   
     const helloContainer = document.getElementById('hello-container');
     helloContainer.innerText = textFromResponse;
-  }
+}
+
+async function goodBook(){
+    // Send a request to /my-data-url.
+    const responseFromServer = await fetch('/hello');
+
+    // Parse the response as JSON.
+    const books = await responseFromServer.json();
+
+    // Now we can reference the fields in books!
+    // console.log(books[0]);
+    // console.log(books[1]);
+    // console.log(books[2]);
+
+    // Pick a random random.
+    const book = books[Math.floor(Math.random() * books.length)];
+
+    // Add it to the page.
+    const bookContainer = document.getElementById('book-container');
+    bookContainer.innerText = book;
+}
   
