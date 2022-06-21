@@ -1,9 +1,37 @@
+/* 
+. is for classes
+# is for IDs 
+otherwise just use element names
+*/
+
+html {
+  background-image: url('/images/OrangeTree.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
 #content {
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  width: 1200px;
+  background-color: white;
 }
 
-#greeting-container {
+#facts-container {
   margin-top: 20px;
+  width: 1200px;
+}
+
+.inline-block {
+    width: 1200px;
+    display: inline-block;
+}
+
+img{
+    height: 400px;
+}
+
+textarea {
+    width: 600px;
 }

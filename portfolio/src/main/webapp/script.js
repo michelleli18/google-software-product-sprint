@@ -26,3 +26,43 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+/**
+ * Adds a random fact about chelle to the page!
+ */
+function addRandomFact() {
+    const facts =
+        ['I grew up moving between 3 different countries!', 'I play the guzheng!', 'I want to learn French!', 'I love rain :D'];
+  
+    // Pick a random greeting.
+    const fact = facts[Math.floor(Math.random() * facts.length)];
+  
+    // Add it to the page.
+    const factsContainer = document.getElementById('facts-container');
+    factsContainer.innerText = fact;
+}
+
+/** Fetches the hello world from the server and adds it to the page. */
+async function sayHello() {
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.text();
+  
+    const helloContainer = document.getElementById('hello-container');
+    helloContainer.innerText = textFromResponse;
+}
+
+async function goodBook(){
+    // Send a request to /my-data-url.
+    const responseFromServer = await fetch('/hello');
+
+    // Parse the response as JSON.
+    const books = await responseFromServer.json();
+    
+    // Pick a random random.
+    const book = books[Math.floor(Math.random() * books.length)];
+
+    // Add it to the page.
+    const bookContainer = document.getElementById('book-container');
+    bookContainer.innerText = book;
+}
+  
